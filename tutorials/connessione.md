@@ -1,36 +1,20 @@
 DotBot ROS
 ===
 
-###Il primo robot didattico che ti permette di imparare ROS
-
-![alt text](./img/dotbot.jpg "DotBot")
-
-
-DotBot è un progetto OpenSource nato dalle idee di Ludovico Russo e Michele Maffucci per insegnare la robotica nelle scuole. 
-
-DotBot ROS è il sistema operativo che gira all'interno di DotBot su un Raspberry Pi. DotBot ROS è pensato per semplificare l'utilizzo di ROS (il sistema operativo per robot) e renderlo accessibile per l'insegnamento.
-
-DotBot ROS è un insieme di Tool e applicativi che si basano su ROS e su tecnologie WEB. In particolare, tramite DotBot ROS è possibile controllare e programmare DotBot attraverso un qualsiasi web browser.
-
-Di seguito un breve tutorial per capire di cosa si tratta.
-
-###Premessa
-
-Questo tutorial si basa sulla versione ancora non stabile di DotBot ROS 0.1, probabilmente molte cose cambieranno e/o verranno migliate nelle versioni future.
 
 ##Connettersi al Robot
 
-Una volta che il robot sarà connesso alla vostra rete interent domestica, esso sarà accessibile attraverso l'url [http://dotbot.local](http://dotbot.local). 
+Una volta che il robot sarà connesso alla vostra rete domestica, esso sarà accessibile attraverso l'url [http://dotbot.local](http://dotbot.local). 
 Collegandovi al sito web apparirà come pagina iniziale una semplice schermata che rimanda a diverse pagine in cui è possibile controllare o programmare il robot.
 
-![alt text](./img/home.png "Main Page")
+![alt text](../img/home.png "Main Page")
 
 
 ###Controllo del Robot
 
 Attraverso la pagina **test** è possibile controllare da semplice webapp i 3 led  e i motori del Robot. Il controllo è molto semplice ed intuitivo, basta infatti selezionare uno dei tre quadratini per vedere il corrispondente led accendersi. Allo stesso modo, una volta inserito un comando di velocità (da -100 a +100) nell'apposito form e aver premuto il tasto **start** vedremo il corrispondente motore muoversi per 2 secondi. 
 
-![alt text](./img/test.png "Test Page")
+![alt text](../img/test.png "Test Page")
 
 
 ##Come funziona ROS
@@ -56,7 +40,7 @@ dove i valori `true` o `false` indicano, rispettivamente, che il rispettivo led 
 
 Per vedere esattamente cosa succede, proviamo ad aprire, in una seconda pagina del browser, la pagina **console** della nostra webapp. Nella pagina vedremo due liste. Andiamo nella seconda lista indicata come **rostopic** e clicchiamo il tasto show relativo al topic `/dotbot/led`. Si aprirà una finestrella in basso allo schermo che mostrerà il messaggio che viene mandato ogni volta che cambiamo lo stato dei led.
 
-![alt text](./img/rosconsole.png "Logo Title Text 1")
+![alt text](../img/rosconsole.png "Logo Title Text 1")
 
 
 
@@ -98,7 +82,7 @@ ROS permette di sviluppare nodi in due principali linguaggi di programmazione: C
 
 Per sviluppare codice da far girare sul robot, DotBot ROS mette a disposizione un semplice tool di programmazione accessibile dal tab **Nodes** della webapp.
 
-![alt text](./img/creazione_nodo.png "Logo Title Text 1")
+![alt text](../img/creazione_nodo.png "Logo Title Text 1")
 
 ## Implementiamo un publisher in Python
 

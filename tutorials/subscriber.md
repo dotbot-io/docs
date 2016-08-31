@@ -28,7 +28,10 @@ Di seguito le azioni che ROS compie nel momento in cui un messaggio viene pubbli
 
 ## Implementiamo un subscriber in Python
 
-A questo punto siamo pronti per iniziare ad implementare in Python un nodo che si sottoscrive ad un topic. Per fare questo, visitiamo la pagina `http://dotbot.local\webapps\simple_ctrl` addessible dalla webapp del robot. Questa pagina presenta una schermata con dei pulsati pensati per controllare il robot remotamente. In particolare, vi sono 5 pulsanti adibiti al controllo della velocità (Avanti, Dietro, Destra, Sinistra, Fermo).
+A questo punto siamo pronti per iniziare ad implementare in Python un nodo che si sottoscrive ad un topic. Per fare questo, visitiamo la pagina `http://dotbot.local/gui/simple_ctrl` addessible dalla webapp del robot. Questa pagina presenta una schermata con dei pulsati pensati per controllare il robot remotamente. In particolare, vi sono 5 pulsanti adibiti al controllo della velocità (Avanti, Dietro, Destra, Sinistra, Stop).
+
+![alt text](../img/sub/gui.png "GUI")
+
 
 Alla pressione di uno di questi pulsanti, verrà pubblicato un messaggio sul topic `/dotbot/simple_ctrl` di tipo `std_msgs/UInt8`. Il tipo `std_msgs/UInt8` definisce un messaggio contenente un unico campo `data` al cui interno è contenuto un numero nel range `[0-255]`. Il valore di questo campo dipende dal tasto premuto, come mostrato in tabella
 
@@ -40,7 +43,7 @@ Alla pressione di uno di questi pulsanti, verrà pubblicato un messaggio sul top
 | SINISTRA | 3 |
 | STOP | 4 |
 
-Potete verificare il funzionamento del topic accedento alla pagina `\console` della webapp.
+Potete verificare il funzionamento del topic accedento alla pagina `/console` della webapp.
 
 Di seguito riportiamo un semplicissimo codice che si sottoscrive al topic e stampa su shell il tasto che abbiamo premuto.
 
@@ -73,6 +76,8 @@ Messaggio: 1 - Tasto: DIETRO
 ```
 
 solo quando verrà premuto un tasto. Altrimenti non apparirà niente sullo schermo. Come al solito, una volta terminato il nodo da console, apparirà il messaggio  `nodo terminato`.
+
+![alt text](../img/sub/shell.png "shell")
 
 
 ###Analizziamo il codice passo passo.
@@ -256,3 +261,5 @@ print 'nodo terminato'
 ```
 
 Insieriamo il codice nell'IDE di programmazione e lanciamo il nodo. A questo punto, vedremo che potremmo controllare il robot da un qualsiasi browser web (consigliamo di usare uno smarphone). Noteremo subito che, se non mandiamo nuove informazioni di velocità, il robot automaticamente smetterà di muoversi dopo due secondi. Questa soluzione è stata adottata in modo da evitare che il robot continui a muoversi all'infinito se, per qualche problema, un publisher di velocità smette di funzionare.
+
+![alt text](../img/sub/example.gif "example")

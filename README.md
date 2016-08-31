@@ -20,6 +20,9 @@ Di seguito un breve tutorial per capire di cosa si tratta.
 
 
 ##Indice
+1. [Introduzione](./tutorials/intro.md)
+1. [Costruzione](./tutorials/costruzione.md)
 
-1. [Intro](./tutorials/connessione.md)
+###DotBot ROS
+1. [Publisher](./tutorials/connessione.md)
 2. [Subscriber](./tutorials/subscriber.md)
